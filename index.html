@@ -11,6 +11,7 @@
         .hero {
             background: linear-gradient(to right, #6a11cb, #2575fc);
             color: white;
+            padding: 5rem 0;
         }
         .section {
             margin-top: 4rem;
@@ -18,6 +19,7 @@
         .footer {
             background-color: #333;
             color: white;
+            padding: 2rem 0;
         }
         .service-card {
             background-color: #f9f9f9;
@@ -25,7 +27,7 @@
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
         .service-card:hover {
             transform: translateY(-5px);
@@ -39,10 +41,39 @@
             list-style: disc;
             margin-left: 20px;
         }
+        .technology-card {
+            background-color: #f9f9f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .technology-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .technology-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .cta-button {
+            background-color: #6a11cb;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .cta-button:hover {
+            background-color: #2575fc;
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans">
-    <header class="hero text-center p-10">
+    <header class="hero text-center">
         <h1 class="text-5xl font-bold">NEXT-GEN CRM IT SOLUTIONS</h1>
         <p class="text-2xl mt-4">Automate. Optimize. Scale.</p>
     </header>
@@ -54,7 +85,7 @@
 
     <section class="section max-w-4xl mx-auto p-6 bg-white shadow-md rounded-md">
         <h2 class="text-3xl font-semibold">Our Services</h2>
-        <div id="services-list" class="mt-4 space-y-6"></div>
+        <div id="services-list" class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6"></div>
     </section>
 
     <section class="section max-w-4xl mx-auto p-6 bg-white shadow-md rounded-md">
@@ -71,7 +102,7 @@
     <section class="section max-w-4xl mx-auto p-6 bg-white shadow-md rounded-md">
         <h2 class="text-3xl font-semibold">Technologies We Use</h2>
         <p class="text-gray-700 mt-4">Our team is proficient in a wide range of technologies to ensure the best possible solutions for your business.</p>
-        <div id="technologies-list" class="mt-4 space-y-6"></div>
+        <div id="technologies-list" class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6"></div>
     </section>
 
     <section class="section max-w-4xl mx-auto p-6 bg-white shadow-md rounded-md text-center">
@@ -79,12 +110,12 @@
         <p class="text-gray-700 mt-4">Contact us today to transform your CRM with automation.</p>
         <p class="mt-4 font-semibold">📧 Email: alwazdev@gmail.com</p>
         <p class="font-semibold">🌐 Website: alwazshahid.vercel.app</p>
+        <button class="cta-button mt-6">Contact Us</button>
     </section>
 
-    <footer class="footer text-center p-6 mt-10">
+    <footer class="footer text-center">
         <p>© 2024 Next-Gen CRM IT Solutions. All rights reserved.</p>
     </footer>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const servicesList = document.getElementById('services-list');
