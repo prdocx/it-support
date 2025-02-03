@@ -127,9 +127,9 @@
                         "Build AI-powered customer service bots with human-like interactions.",
                         "Use AI to generate personalized email copy based on customer history.",
                         "Implement AI-based follow-up suggestions based on previous responses.",
-                        "Lverage AI driven product recommendations in CRM sales.",
+                        "Leverage AI-driven product recommendations in CRM sales.",
                         "Develop a predictive analytics engine for sales forecasting.",
-                        "Integrate AI-powered OCR for auto-ex-tracting data from uploaded documents.",
+                        "Integrate AI-powered OCR for auto-extracting data from uploaded documents.",
                         "Use AI to auto-tag leads & contacts based on interaction patterns.",
                         "Automate the prioritization of inbound support requests with AI scoring.",
                         "Enable dynamic pricing models using AI for personalized deals."
@@ -142,17 +142,17 @@
                         "Set up event-driven webhooks to trigger automations across platforms.",
                         "Develop a logging system for webhook failures and automatic retries.",
                         "Integrate CRM with accounting software for real-time invoicing.",
-                        "Automat webhook-based SMS/email notifications for high-priority deals.",
+                        "Automate webhook-based SMS/email notifications for high-priority deals.",
                         "Sync CRM contacts with WhatsApp/Twilio for direct messaging.",
                         "Connect CRM workflows with Slack/Discord for instant sales notifications.",
                         "Develop a webhook-triggered task creation system for Trello/Asana.",
                         "Integrate CRM with AI-powered voice assistants (Alexa, Google Assistant).",
                         "Use webhooks for fraud detection alerts on high-risk transactions.",
                         "Create webhook-based integrations for legal compliance tracking.",
-                        "Build a webhook driven RPA system for automating document processing.",
+                        "Build a webhook-driven RPA system for automating document processing.",
                         "Enable CRM to auto-create Zoom/Google meet links via API calls.",
                         "Sync CRM deals with external databases for deeper analytics.",
-                        "Develop middleware for complex API integrations with non-standard CRMS."
+                        "Develop middleware for complex API integrations with non-standard CRMs."
                     ]
                 },
                 {
@@ -162,9 +162,9 @@
                         "Build real-time revenue forecasting models using CRM data.",
                         "Automate customer segmentation reports with AI-driven insights.",
                         "Create a data pipeline for live tracking of conversion rates.",
-                        "Implement AI based anomaly detection to flag irregular sales trends.",
+                        "Implement AI-based anomaly detection to flag irregular sales trends.",
                         "Use predictive analytics to forecast pipeline bottlenecks.",
-                        "Integrate machine learning models to identify high value customers.",
+                        "Integrate machine learning models to identify high-value customers.",
                         "Set up an automated sales report generator using CRM data.",
                         "Build dashboards that blend CRM data with marketing analytics.",
                         "Develop advanced reporting filters for sales rep performance tracking."
@@ -175,83 +175,28 @@
                     tasks: [
                         "Develop multi-step chatbot workflows for lead nurturing.",
                         "Enable dynamic chatbot responses based on CRM data.",
-                        "Automate lead qualification using AI chatbots.",
-                        "Build WhatsApp/Twilio chatbot integration for automated responses.",
-                        "Create a self learning chatbot that adapts over time.",
-                        "Develop chatbot based appointment scheduling.",
-                        "Integrate chatbot with CRM ticketing system for auto assigned cases.",
-                        "Enable chatbot triggered deal progression inside CRM.",
-                        "Use NLP-powered chatbots for personalized customer interactions.",
-                        "Develop an internal AI assistant for sales teams inside CRM."
-                    ]
-                },
-                {
-                    name: "Custom CRM Methodologie & advanced systems",
-                    tasks: [
-                        "Design custom lead qualification models.",
-                        "Develop a multi-tier CRM access system.",
-                        "Create a pipeline based automation framework for different business models.",
-                        "Integrate blockchain technology for secure customer data management.",
-                        "Develop a custom-built CRM module for membership tracking.",
-                        "Enable multi-language support with AI-driven translations.",
-                        "Implement geo-fencing technology for location based CRM automations.",
-                        "Develop advanced permissions-based CRM automation rules.",
-                        "Create a GDPR-compliant CRM data handling system.",
-                        "Design a workflow-based AI recommendation engine for deal strategy."
-                    ]
-                },
-                {
-                    name: "Mobile CRM & cross-platform automation",
-                    tasks: [
-                        "Develop mobile CRM & cross-platform syncing between desktop and mobile CRM apps."
-                    ]
-                },
-                {
-                    name: "Automation & RPA (Robotic Process automation)",
-                    tasks: [
-                        "Automate lead form submissions into CRM databases.",
-                        "Use RPA bots to automate email responses.",
-                        "Develop AI-powered email routing systems.",
-                        "Enable automatic CRM updates from external spreadsheets.",
-                        "Use RPA to extract & input data across multiple platforms.",
-                        "Create auto-reply workflows for inbound inquiries.",
-                        "Implement AI-based call transcription into CRM logs.",
-                        "develop RPA bots to monitor & alert for overdue tasks.",
-                        "use automation to sync customer details across multiple apps.",
-                        "enable automatic document generation for sales agreements."
-                    ]
-                },
-                {
-                    name: "Security & Compliance",
-                    tasks: [
-                        "Develop role-based CRM access controls.",
-                        "Automate security audits for user access logs.",
-                        "Enable multi-factor authentication inside CRM.",
-                        "implement encrypted CRM data storage.",
-                        "develop an automated backup & restore system.",
-                        "use AI to detect unauthorized CRM access attempts.",
-                        "create GDPR & HIPAA compliance tracking inside CRM.",
-                        "build a security alert system for CRM anomalies.",
-                        "enable biometric login authentication for CRM users.",
-                        "develop an AI-powered fraud detection engine."
+                        "Automate lead qualification using AI-driven chatbots.",
+                        "Integrate chatbots with CRM for real-time data syncing.",
+                        "Use chatbots to schedule meetings and send reminders automatically.",
+                        "Set up proactive chatbot outreach based on user activity.",
+                        "Build multilingual chatbots for a global customer base.",
+                        "Implement sentiment-based chatbot replies for better customer engagement.",
+                        "Use chatbots for customer feedback collection and automated reporting.",
+                        "Create a chatbot-powered support system integrated with CRM ticketing."
                     ]
                 }
             ];
 
             categories.forEach(category => {
                 const categoryItem = document.createElement('div');
-                category item.classList.add('service-card');
-                category item.innerHTML = `<h3 class="text-2xl font-semibold">${category.name}</h3>`;
-                servicesList.appendChild(category item);
-
-                const taskList = document.createElement('ul');
-                taskList.classList.add('list-disc', 'list-inside', 'mt-2', 'text-gray-700', 'space-y-2');
-                category.tasks.forEach(task => {
-                    const taskItem = document.createElement('li');
-                    taskItem.textContent = task;
-                    taskList.appendChild(taskItem);
-                });
-                servicesList.appendChild(taskList);
+                categoryItem.classList.add('service-card');
+                categoryItem.innerHTML = `
+                    <h3 class="text-xl font-semibold">${category.name}</h3>
+                    <ul class="list-disc pl-6 mt-4">
+                        ${category.tasks.map(task => `<li>${task}</li>`).join('')}
+                    </ul>
+                `;
+                servicesList.appendChild(categoryItem);
             });
         });
     </script>
