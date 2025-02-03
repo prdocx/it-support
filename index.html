@@ -6,27 +6,40 @@
     <title>Next-Gen CRM IT Solutions</title>
     <script src="https://unpkg.com/htmx.org@1.9.6"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for better aesthetics */
+        .hero {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+        }
+        .section {
+            margin-top: 4rem;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 font-sans">
-    <header class="bg-blue-600 text-white text-center p-6">
-        <h1 class="text-3xl font-bold">NEXT-GEN CRM IT SOLUTIONS</h1>
-        <p class="text-lg">Automate. Optimize. Scale.</p>
+    <header class="hero text-center p-10">
+        <h1 class="text-4xl font-bold">NEXT-GEN CRM IT SOLUTIONS</h1>
+        <p class="text-xl mt-4">Automate. Optimize. Scale.</p>
     </header>
 
-    <section class="max-w-4xl mx-auto mt-6 p-6 bg-white shadow-md rounded-md">
-        <h2 class="text-2xl font-semibold">Unlock the full potential of your CRM</h2>
-        <p class="text-gray-700 mt-2">We specialize in high-performance CRM automation, AI integration, webhooks, and chatbot workflows.</p>
+    <section class="section max-w-4xl mx-auto p-6 bg-white shadow-md rounded-md">
+        <h2 class="text-3xl font-semibold">Unlock the Full Potential of Your CRM</h2>
+        <p class="text-gray-700 mt-4">We specialize in high-performance CRM automation, AI integration, webhooks, and chatbot workflows.</p>
     </section>
 
-    <section class="max-w-4xl mx-auto mt-6 p-6 bg-white shadow-md rounded-md">
-        <h2 class="text-2xl font-semibold">Our Services</h2>
-        <ul id="services-list" class="list-disc list-inside mt-3 text-gray-700"></ul>
+    <section class="section max-w-4xl mx-auto p-6 bg-white shadow-md rounded-md">
+        <h2 class="text-3xl font-semibold">Our Services</h2>
+        <div id="services-list" class="mt-4 space-y-6"></div>
     </section>
-    
 
-    <section class="max-w-4xl mx-auto mt-6 p-6 bg-white shadow-md rounded-md">
-        <h2 class="text-2xl font-semibold">Why Choose Us?</h2>
-        <ul class="list-disc list-inside mt-3 text-gray-700">
+    <section class="section max-w-4xl mx-auto p-6 bg-white shadow-md rounded-md">
+        <h2 class="text-3xl font-semibold">Why Choose Us?</h2>
+        <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
             <li>Proven Expertise – Results-driven CRM solutions</li>
             <li>AI & Automation Focus – Redefining efficiency</li>
             <li>End-to-End CRM Transformation</li>
@@ -35,40 +48,183 @@
         </ul>
     </section>
 
-    <section class="max-w-4xl mx-auto mt-6 p-6 bg-white shadow-md rounded-md text-center">
-        <h2 class="text-2xl font-semibold">Get in Touch</h2>
-        <p class="text-gray-700 mt-2">Contact us today to transform your CRM with automation.</p>
+    <section class="section max-w-4xl mx-auto p-6 bg-white shadow-md rounded-md text-center">
+        <h2 class="text-3xl font-semibold">Get in Touch</h2>
+        <p class="text-gray-700 mt-4">Contact us today to transform your CRM with automation.</p>
         <p class="mt-4 font-semibold">📧 Email: [Your Email]</p>
         <p class="font-semibold">🌐 Website: [Your Website]</p>
         <p class="font-semibold">📞 Call: [Your Contact Information]</p>
     </section>
 
-    <footer class="text-center p-4 bg-gray-800 text-white mt-6">
+    <footer class="footer text-center p-6 mt-10">
         <p>© 2024 Next-Gen CRM IT Solutions. All rights reserved.</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('tasks.json')
-                .then(response => response.json())
-                .then(data => {
-                    const servicesList = document.getElementById('services-list');
-                    data.categories.forEach(category => {
-                        const categoryItem = document.createElement('li');
-                        categoryItem.innerHTML = `<strong>${category.name}</strong>`;
-                        servicesList.appendChild(categoryItem);
+            const servicesList = document.getElementById('services-list');
+            const categories = [
+                {
+                    name: "Sales & Marketing Pipelines",
+                    tasks: [
+                        "Design multi-stage sales pipelines with automated deal progression.",
+                        "Implement automated lead scoring models based on behavior & engagement.",
+                        "Develop AI-driven deal win probability models for forecasting.",
+                        "Automate task assignments based on lead status or sales rep workload.",
+                        "Set up automated lead nurturing via email, SMS, WhatsApp.",
+                        "Trigger pipeline changes based on lead actions (e.g., clicked an email).",
+                        "Integrate external data sources (LinkedIn, website tracking) into lead profiles.",
+                        "Build a dynamic funnel system that adapts based on user engagement.",
+                        "Create advanced segmentation rules for targeted marketing automation.",
+                        "Develop custom lead-routing logic based on location, product, or past interactions.",
+                        "Optimize pipeline conversion rates by A/B testing workflow automations.",
+                        "Implement 'smart reminders' for sales reps to follow up with leads.",
+                        "Create pipeline-specific dashboards with real-time deal progress tracking.",
+                        "Build cross-platform pipeline synchronization (CRM ↔ ERP, eCommerce, Support).",
+                        "Automate contract generation and e-signature collection."
+                    ]
+                },
+                {
+                    name: "AI-Powered CRM Enhancements",
+                    tasks: [
+                        "Integrate OpenAI for intelligent chat & email responses.",
+                        "Develop AI models to predict customer churn.",
+                        "Implement AI-driven sentiment analysis for customer interactions.",
+                        "Use AI for real-time intent recognition in conversations.",
+                        "Automate lead categorization using AI-trained behavior analysis.",
+                        "Create a voice-based assistant for CRM task automation.",
+                        "Build AI-powered customer service bots with human-like interactions.",
+                        "Use AI to generate personalized email copy based on customer history.",
+                        "Implement AI-based follow-up suggestions based on previous responses.",
+                        "Leverage AI-driven product recommendations in CRM sales.",
+                        "Develop a predictive analytics engine for sales forecasting.",
+                        "Integrate AI-powered OCR for auto-extracting data from uploaded documents.",
+                        "Use AI to auto-tag leads & contacts based on interaction patterns.",
+                        "Automate the prioritization of inbound support requests with AI scoring.",
+                        "Enable dynamic pricing models using AI for personalized deals."
+                    ]
+                },
+                {
+                    name: "Webhooks & API-Based Integrations",
+                    tasks: [
+                        "Create webhook-based real-time data sync between CRM & third-party tools.",
+                        "Set up event-driven webhooks to trigger automations across platforms.",
+                        "Develop a logging system for webhook failures and automatic retries.",
+                        "Integrate CRM with accounting software for real-time invoicing.",
+                        "Automate webhook-based SMS/email notifications for high-priority deals.",
+                        "Sync CRM contacts with WhatsApp/Twilio for direct messaging.",
+                        "Connect CRM workflows with Slack/Discord for instant sales notifications.",
+                        "Develop a webhook-triggered task creation system for Trello/Asana.",
+                        "Integrate CRM with AI-powered voice assistants (Alexa, Google Assistant).",
+                        "Use webhooks for fraud detection alerts on high-risk transactions.",
+                        "Create webhook-based integrations for legal compliance tracking.",
+                        "Build a webhook-driven RPA system for automating document processing.",
+                        "Enable CRM to auto-create Zoom/Google Meet links via API calls.",
+                        "Sync CRM deals with external databases for deeper analytics.",
+                        "Develop middleware for complex API integrations with non-standard CRMs."
+                    ]
+                },
+                {
+                    name: "Advanced Data Analytics & Reporting",
+                    tasks: [
+                        "Develop custom Power BI dashboards for deep CRM analytics.",
+                        "Build real-time revenue forecasting models using CRM data.",
+                        "Automate customer segmentation reports with AI-driven insights.",
+                        "Create a data pipeline for live tracking of conversion rates.",
+                        "Implement AI-based anomaly detection to flag irregular sales trends.",
+                        "Use predictive analytics to forecast pipeline bottlenecks.",
+                        "Integrate machine learning models to identify high-value customers.",
+                        "Set up an automated sales report generator using CRM data.",
+                        "Build dashboards that blend CRM data with marketing analytics.",
+                        "Develop advanced reporting filters for sales rep performance tracking."
+                    ]
+                },
+                {
+                    name: "Automated Chatbot Workflows",
+                    tasks: [
+                        "Develop multi-step chatbot workflows for lead nurturing.",
+                        "Enable dynamic chatbot responses based on CRM data.",
+                        "Automate lead qualification using AI chatbots.",
+                        "Build WhatsApp/Twilio chatbot integration for automated responses.",
+                        "Create a self-learning chatbot that adapts over time.",
+                        "Develop chatbot-based appointment scheduling.",
+                        "Integrate chatbot with CRM ticketing system for auto-assigned cases.",
+                        "Enable chatbot-triggered deal progression inside CRM.",
+                        "Use NLP-powered chatbots for personalized customer interactions.",
+                        "Develop an internal AI assistant for sales teams inside CRM."
+                    ]
+                },
+                {
+                    name: "Custom CRM Methodologies & Advanced Systems",
+                    tasks: [
+                        "Design custom lead qualification models.",
+                        "Develop a multi-tier CRM access system.",
+                        "Create a pipeline-based automation framework for different business models.",
+                        "Integrate blockchain technology for secure customer data management.",
+                        "Develop a custom-built CRM module for membership tracking.",
+                        "Enable multi-language support with AI-driven translations.",
+                        "Implement geo-fencing technology for location-based CRM automations.",
+                        "Develop advanced permissions-based CRM automation rules.",
+                        "Create a GDPR-compliant CRM data handling system.",
+                        "Design a workflow-based AI recommendation engine for deal strategy."
+                    ]
+                },
+                {
+                    name: "Mobile CRM & Cross-Platform Automation",
+                    tasks: [
+                        "Develop mobile-first CRM interfaces.",
+                        "Enable CRM push notifications for high-priority tasks.",
+                        "Create mobile-friendly CRM dashboards.",
+                        "Implement voice-to-text automation for mobile CRM updates.",
+                        "Build cross-platform syncing between desktop and mobile CRM apps."
+                    ]
+                },
+                {
+                    name: "Automation & RPA (Robotic Process Automation)",
+                    tasks: [
+                        "Automate lead form submissions into CRM databases.",
+                        "Use RPA bots to automate email responses.",
+                        "Develop AI-powered email routing systems.",
+                        "Enable automatic CRM updates from external spreadsheets.",
+                        "Use RPA to extract & input data across multiple platforms.",
+                        "Create auto-reply workflows for inbound inquiries.",
+                        "Implement AI-based call transcription into CRM logs.",
+                        "Develop RPA bots to monitor & alert for overdue tasks.",
+                        "Use automation to sync customer details across multiple apps.",
+                        "Enable automatic document generation for sales agreements."
+                    ]
+                },
+                {
+                    name: "Security & Compliance",
+                    tasks: [
+                        "Develop role-based CRM access controls.",
+                        "Automate security audits for user access logs.",
+                        "Enable multi-factor authentication inside CRM.",
+                        "Implement encrypted CRM data storage.",
+                        "Develop an automated backup & restore system.",
+                        "Use AI to detect unauthorized CRM access attempts.",
+                        "Create GDPR & HIPAA compliance tracking inside CRM.",
+                        "Build a security alert system for CRM anomalies.",
+                        "Enable biometric login authentication for CRM users.",
+                        "Develop an AI-powered fraud detection engine."
+                    ]
+                }
+            ];
 
-                        const taskList = document.createElement('ul');
-                        taskList.classList.add('list-disc', 'list-inside', 'mt-2', 'text-gray-700');
-                        category.tasks.forEach(task => {
-                            const taskItem = document.createElement('li');
-                            taskItem.textContent = task;
-                            taskList.appendChild(taskItem);
-                        });
-                        servicesList.appendChild(taskList);
-                    });
-                })
-                .catch(error => console.error('Error fetching the JSON data:', error));
+            categories.forEach(category => {
+                const categoryItem = document.createElement('div');
+                categoryItem.innerHTML = `<h3 class="text-2xl font-semibold">${category.name}</h3>`;
+                servicesList.appendChild(categoryItem);
+
+                const taskList = document.createElement('ul');
+                taskList.classList.add('list-disc', 'list-inside', 'mt-2', 'text-gray-700', 'space-y-2');
+                category.tasks.forEach(task => {
+                    const taskItem = document.createElement('li');
+                    taskItem.textContent = task;
+                    taskList.appendChild(taskItem);
+                });
+                servicesList.appendChild(taskList);
+            });
         });
     </script>
 </body>
